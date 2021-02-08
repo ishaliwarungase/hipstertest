@@ -83,7 +83,12 @@ public class StepDefs
                 if(msg.isEmpty())
                 {
                     Assert.fail("Error");
+                    System.out.println("Failed Testcase");
                 }
+                else
+                {
+                    System.out.println("Passed Testcase");
+                }    
           }
         catch (Exception e) 
          {
