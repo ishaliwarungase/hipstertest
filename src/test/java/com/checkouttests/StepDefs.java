@@ -28,7 +28,7 @@ public class StepDefs
 
         driver = new ChromeDriver(options);
 
-        driver.get("http://192.168.30.145/");
+        driver.get("http://mobilecom.coe.com/");
 
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
     } 
