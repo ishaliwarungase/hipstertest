@@ -49,7 +49,7 @@ public class StepDefs
 
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
-        driver.findElement(By.id("zip_code")).sendKeys(32456);
+        driver.findElement(By.id("zip_code")).sendKeys("32456");
                          
         driver.findElement(By.id("city")).sendKeys("Orlando");
            
@@ -57,7 +57,7 @@ public class StepDefs
 
         driver.findElement(By.id("country")).sendKeys("United States");
 
-        driver.findElement(By.id("credit_card_number")).sendKeys(2234-5632-1357-8294);
+        driver.findElement(By.id("credit_card_number")).sendKeys("2234-5632-1357-8294");
           
         Select credit_card_expiration_month = new Select(driver.findElement(By.id("credit_card_expiration_month")));
         credit_card_expiration_month.selectByVisibleText("January");
@@ -65,7 +65,7 @@ public class StepDefs
         Select credit_card_expiration_year = new Select(driver.findElement(By.id("credit_card_expiration_year")));
         credit_card_expiration_year.selectByVisibleText("2023");
            
-        driver.findElement(By.id("credit_card_cvv")).sendKeys(6387);
+        driver.findElement(By.id("credit_card_cvv")).sendKeys("6387");
     }
 
     @Then("Order is Placed")
