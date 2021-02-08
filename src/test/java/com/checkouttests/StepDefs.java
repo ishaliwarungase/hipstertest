@@ -60,10 +60,10 @@ public class StepDefs
         driver.findElement(By.id("credit_card_number")).sendKeys("");
           
         Select credit_card_expiration_month = new Select(driver.findElement(By.id("credit_card_expiration_month")));
-        credit_card_expiration_month.selectByVisibleText("");
+        credit_card_expiration_month.selectByVisibleText("January");
 
         Select credit_card_expiration_year = new Select(driver.findElement(By.id("credit_card_expiration_year")));
-        credit_card_expiration_year.selectByVisibleText("");
+        credit_card_expiration_year.selectByVisibleText("2023");
            
         driver.findElement(By.id("credit_card_cvv")).sendKeys("");
     }
