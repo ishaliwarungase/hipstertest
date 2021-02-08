@@ -23,7 +23,7 @@ public class StepDefs
     WebDriver driver;
     @Before public void setUp()
     { 
-        System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/jobs/CucumberTest/workspace/src/test/java/com/cucumberseleniumdemo/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/jobs/hipstertest/workspace/src/test/java/com/checkouttests/chromedriver");
         ChromeOptions options = new ChromeOptions().setHeadless(true);
 
         driver = new ChromeDriver(options);
@@ -87,8 +87,9 @@ public class StepDefs
          {
 
          }
-    }
         driver.close();
+    }
+        
 }
       
 
