@@ -77,6 +77,8 @@ public class StepDefs
                 String errmsg = "Unable to complete registration, please try again later";
 
                 String msg = driver.findElement(By.id("email")).getAttribute("value");
+                
+                System.out.println(msg);
 
                 if(msg.isEmpty())
                 {
