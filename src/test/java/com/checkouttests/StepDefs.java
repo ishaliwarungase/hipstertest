@@ -45,19 +45,19 @@ public class StepDefs
     @When("User enters information to place order")
     public void user_enters_information_to_place_order() 
     {
-        driver.findElement(By.id("email")).sendKeys("");
+        driver.findElement(By.id("email")).sendKeys("abc@gmail.com");
 
-        driver.findElement(By.id("street_address")).sendKeys("");
+        driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
-        driver.findElement(By.id("zip_code")).sendKeys("");
+        driver.findElement(By.id("zip_code")).sendKeys(32456);
                          
-        driver.findElement(By.id("city")).sendKeys("");
+        driver.findElement(By.id("city")).sendKeys("Orlando");
            
-        driver.findElement(By.id("state")).sendKeys("");
+        driver.findElement(By.id("state")).sendKeys("Florida");
 
-        driver.findElement(By.id("country")).sendKeys("");
+        driver.findElement(By.id("country")).sendKeys("United States");
 
-        driver.findElement(By.id("credit_card_number")).sendKeys("");
+        driver.findElement(By.id("credit_card_number")).sendKeys(2234-5632-1357-8294);
           
         Select credit_card_expiration_month = new Select(driver.findElement(By.id("credit_card_expiration_month")));
         credit_card_expiration_month.selectByVisibleText("January");
@@ -65,22 +65,16 @@ public class StepDefs
         Select credit_card_expiration_year = new Select(driver.findElement(By.id("credit_card_expiration_year")));
         credit_card_expiration_year.selectByVisibleText("2023");
            
-        driver.findElement(By.id("credit_card_cvv")).sendKeys("");
+        driver.findElement(By.id("credit_card_cvv")).sendKeys(6387);
     }
 
     @Then("Order is Placed")
     public void order_is_placed() 
     {
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
-        try 
-          {
-            Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
-                 
-          }
-        catch (Exception e) 
-         {
-
-         }
+      
+        Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
+        
         driver.close();
     }
         
