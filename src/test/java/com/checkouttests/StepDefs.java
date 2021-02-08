@@ -36,9 +36,9 @@ public class StepDefs
     @Given("User browse products")
     public void user_browse_products()
     {
-        driver.findElement(By.xpath("/html/body/main/div/div/div[1]/div[3]/div")).click();
+        driver.findElement(By.xpath("/html/body/main/div/div/div[2]/div[2]/div/a/img")).click(); 
 
-        driver.findElement(By.xpath("/html/body/main/div/div/div[1]/div[2]/form/div/button")).click();
+        driver.findElement(By.xpath("/html/body/main/div[1]/div/div[2]/div/form/div/button")).click();
 
     }
 
