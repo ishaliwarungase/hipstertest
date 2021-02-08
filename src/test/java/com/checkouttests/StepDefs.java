@@ -74,21 +74,8 @@ public class StepDefs
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
         try 
           {
-                String errmsg = "Unable to complete registration, please try again later";
-
-                String msg = driver.findElement(By.id("email")).getAttribute("value");
-                
-                System.out.println(msg);
-
-                if(msg.isEmpty())
-                {
-                    Assert.fail("Error");
-                    System.out.println("Failed Testcase");
-                }
-                else
-                {
-                    System.out.println("Passed Testcase");
-                }    
+            Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
+                 
           }
         catch (Exception e) 
          {
