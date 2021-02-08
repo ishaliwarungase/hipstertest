@@ -80,7 +80,7 @@ public class StepDefs
 
                 if(msg.isEmpty())
                 {
-                    Assert.assertFail("Error");
+                    Assert.fail("Error");
                 }
           }
         catch (Exception e) 
