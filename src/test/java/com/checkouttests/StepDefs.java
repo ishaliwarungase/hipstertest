@@ -72,11 +72,14 @@ public class StepDefs
     @Then("Order is Placed")
     public void order_is_placed() 
     {
-        String email = driver.findElement(By.id("email")).getAttribute("value");
-        
-        if(email.isEmpty())
+        List<WebElement> Elements = driver.findElements(By.tagName("div"));
+        Boolean ElementExists = false;
+        for(counter = 0, counter < Elements.size(); counter++)
         {
-            System.out.println("input box is empty");
+            if(Elements.get(counter).getText().equals("Please fill out this field.")
+               {
+                    ElementExists = true;
+               }
         }
         
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
