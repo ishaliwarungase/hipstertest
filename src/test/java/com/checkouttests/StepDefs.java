@@ -74,23 +74,8 @@ public class StepDefs
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
       
 //         Assert.assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
-        
-        String errmsg = "Your order is complete!";
-       
-        private boolean isTextPresent(String text)
-        {
-            try
-            {
-                boolean b = driver.getPageSource().contains(text);
-                return b;
-            }
-            catch(Exception e)
-            {
-                return false;
-            }
-        }
-        
-        Assert.assertTrue(isTextPresent("Your order is complete!"), "Error in Placing the Order");
+
+       Assert.assertTrue(driver.getPageSource().contains("Your order is complete!"), "Error in Placing the Order");
         
         driver.close();
     }
