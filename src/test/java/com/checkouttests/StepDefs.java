@@ -76,10 +76,21 @@ public class StepDefs
 //         Assert.assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
         
         String errmsg = "Your order is complete!";
+       
+        private boolean isTextPresent(String text)
+        {
+            try
+            {
+                boolean b = driver.getPageSource().contains(text);
+                return b;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
         
-        String msg = driver.getPageSource().contains("Your order is complete!");
-        
-        Assert.assertFalse(errmsg.equals(msg));
+        Assert.assertTrue(isTextPresent("Your order is complete!"), "Error in Placing the Order");
         
         driver.close();
     }
