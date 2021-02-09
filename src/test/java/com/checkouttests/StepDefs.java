@@ -72,7 +72,7 @@ public class StepDefs
     @Then("Order is Placed")
     public void order_is_placed() 
     {
-        WebElement email = driver.findElement(By.id("email")).getAttribute("value");
+        String email = driver.findElement(By.id("email")).getAttribute("value");
         
         if(email.isEmpty())
         {
