@@ -74,7 +74,7 @@ public class StepDefs
     {
         List<WebElement> Elements = driver.findElements(By.tagName("div"));
         Boolean ElementExists = false;
-        for(counter = 0; counter < Elements.size(); counter++)
+        for( int counter = 0; counter < Elements.size(); counter++)
         {
             if(Elements.get(counter).getText().equals("Please fill out this field."))
                {
