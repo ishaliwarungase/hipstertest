@@ -75,7 +75,7 @@ public class StepDefs
       
 //         Assert.assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
         
-        errmsg = "Your order is complete!";
+        String errmsg = "Your order is complete!";
         
         String msg = driver.getPageSource().contains("Your order is complete!");
         
