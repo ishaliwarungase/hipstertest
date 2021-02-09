@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import cucumber.api.java.Before;
@@ -75,7 +76,7 @@ public class StepDefs
         
         if(email.isEmpty())
         {
-            System.Out.Println("input box is empty");
+            System.out.println("input box is empty");
         }
         
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
