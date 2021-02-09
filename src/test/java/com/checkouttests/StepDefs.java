@@ -73,7 +73,13 @@ public class StepDefs
     {
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
       
-        Assert.assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
+//         Assert.assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("Your order is complete!"));
+        
+        errmsg = "Your order is complete!";
+        
+        String msg = driver.getPageSource().contains("Your order is complete!");
+        
+        Assert.assertFalse(errmsg.equals(msg));
         
         driver.close();
     }
