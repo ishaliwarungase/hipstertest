@@ -48,7 +48,7 @@ public class StepDefs
     {
         driver.findElement(By.id("email")).sendKeys("abc@gmail.com");
        
-        Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("Please fill out this field."));
+        Assert.assertTrue(driver.findElement(By.id("email")).getText().matches("Please fill out this field."));
       
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
