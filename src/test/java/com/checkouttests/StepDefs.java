@@ -46,7 +46,12 @@ public class StepDefs
     @When("User enters information to place order")
     public void user_enters_information_to_place_order() 
     {
-        driver.findElement(By.id("email")).sendKeys("");
+        String email = driver.findElement(By.id("email")).sendKeys("");
+        
+        if (email.getAttribute("value").equals("")) 
+        {
+            System.out.println("Email Field is empty");
+        }
 
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
@@ -72,16 +77,7 @@ public class StepDefs
     @Then("Order is Placed")
     public void order_is_placed() 
     {
-        List<WebElement> Elements = driver.findElements(By.tagName("div"));
-        Boolean ElementExists = false;
-        for( int counter = 0; counter < Elements.size(); counter++)
-        {
-            if(Elements.get(counter).getText().equals("Please fill out this field."))
-               {
-                    ElementExists = true;
-               }
-        }
-        
+    
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
       
 //         String msg = "Your order is complete!";
