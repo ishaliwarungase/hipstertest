@@ -52,7 +52,7 @@ public class StepDefs
         
         if (!email.getAttribute("value").equals("")) 
         {
-            System.out.println("Email Field is empty");
+            System.out.println(email);
         }
         else
         {
