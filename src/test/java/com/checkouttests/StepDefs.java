@@ -46,7 +46,7 @@ public class StepDefs
     @When("User enters information to place order")
     public void user_enters_information_to_place_order() 
     {
-        driver.findElement(By.id("email")).sendKeys("abc@gmail.com");
+        driver.findElement(By.id("email")).sendKeys("");
        
         Assert.assertFalse(driver.findElement(By.id("email")).getText().matches("Please fill out this field."));
       
