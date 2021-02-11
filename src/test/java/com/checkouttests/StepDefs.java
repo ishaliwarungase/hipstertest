@@ -52,13 +52,9 @@ public class StepDefs
         
         if (email.getAttribute("value").isEmpty()) 
         {
-            System.out.println("Email is empty");
+            Assert.fail("Email is empty");
         }
-        else
-        {
-            System.out.println("AAAAAAAAAAAA");
-        }
-
+      
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
         driver.findElement(By.id("zip_code")).sendKeys("32456");
