@@ -50,7 +50,7 @@ public class StepDefs
         
         WebElement email = driver.findElement(By.id("email"));
         
-        if (!email.getAttribute("value").equals("")) 
+        if (email.getAttribute("value").isEmpty()) 
         {
             System.out.println(email);
         }
