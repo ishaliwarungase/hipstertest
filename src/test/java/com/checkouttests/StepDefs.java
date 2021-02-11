@@ -47,13 +47,8 @@ public class StepDefs
     public void user_enters_information_to_place_order() 
     {
         driver.findElement(By.id("email")).sendKeys("");
-        
-        WebElement email = driver.findElement(By.id("email"));
-        
-        if (email.getAttribute("value").isEmpty()) 
-        {
-            Assert.fail("Email is empty");
-        }
+       
+        Assert.assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("Please fill out this field."));
       
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
