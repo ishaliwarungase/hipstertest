@@ -50,9 +50,13 @@ public class StepDefs
         
         WebElement email = driver.findElement(By.id("email"));
         
-        if (email.getAttribute("value").equals("")) 
+        if (!email.getAttribute("value").equals("")) 
         {
             System.out.println("Email Field is empty");
+        }
+        else
+        {
+            System.out.println("AAAAAAAAAAAA");
         }
 
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
