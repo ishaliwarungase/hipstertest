@@ -46,14 +46,13 @@ public class StepDefs
     @When("User enters information to place order")
     public void user_enters_information_to_place_order() 
     {
-        WebElement email = driver.findElement(By.id("email")).sendKeys("");
+        WebElement email = driver.findElement(By.id("email")).sendKeys("abc@gmail.com");
         
         String msg = email.getAttribute("value");
         
-        if ( msg.equals(""))
-        {
-           System.out.println("Email is empty");
-        }
+       
+           System.out.println(msg);
+        
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
         driver.findElement(By.id("zip_code")).sendKeys("32456");
