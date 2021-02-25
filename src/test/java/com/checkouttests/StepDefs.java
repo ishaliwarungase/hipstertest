@@ -81,10 +81,12 @@ public class StepDefs
     public void order_is_placed() 
     {
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
-     }
+        
         driver.close();
+    }
 }
+        
 
-}
+
 
 
