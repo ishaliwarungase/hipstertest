@@ -46,7 +46,9 @@ public class StepDefs
     @When("User enters information to place order")
     public void user_enters_information_to_place_order() 
     {
-        WebElement email = driver.findElement(By.id("email")).sendKeys("");
+        driver.findElement(By.id("email")).sendKeys("abc6@gmail.com");
+        
+        WebElement email = driver.findElement(By.id("email"));
         
         String msg = email.getAttribute("value");
         
