@@ -52,6 +52,8 @@ public class StepDefs
         
         String msg = email.getAttribute("value");
         
+        System.out.println("Value of type attribute: "+msg);
+        
         String errmsg = "someone@example.com";
         
         Assert.assertFalse(errmsg.equals(msg));
