@@ -53,7 +53,7 @@ public class StepDefs
         
         String errmsg = "someone@example.com";
         
-        if( !msg.equals("someone@example.com"))
+        if( msg.equals("someone@example.com"))
         {
 //             Assert.assertFalse(errmsg.equals(msg));
             Assert.fail("Please enter email");
