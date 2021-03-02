@@ -45,22 +45,23 @@ public class StepDefs
     @When("User enters valid information to place order")
     public void user_enters_information_to_place_order() 
     {
-        WebElement email = driver.findElement(By.id("email"));
+        WebElement email = driver.findElement(By.id("email")).sendKeys("abc@coe.in");
         
-       String msg = email.getAttribute("value");
+//        String msg = email.getAttribute("value");
         
 //         System.out.println("Value of type attribute: "+msg);
         
-        String errmsg = "someone@example.com";
+//         String errmsg = "someone@example.com";
         
-        if( msg.equals("someone@example.com"))
+        if( email.getAttribute("value").equals("someone@example.com"))
         {
 //             Assert.assertFalse(errmsg.equals(msg));
             Assert.fail("Please enter email");
         }
-            
-            
-//      driver.findElement(By.id("email")).sendKeys("abc6@gmail.com");
+       
+         
+          
+//           driver.findElement(By.id("email")).sendKeys("abc6@gmail.com");
         
 //         
         
