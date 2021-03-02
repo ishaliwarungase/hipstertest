@@ -42,7 +42,7 @@ public class StepDefs
         driver.findElement(By.xpath("/html/body/main/div[1]/div/div[2]/div/form/div/button")).click();
     }
 
-    @When("User enters information to place order")
+    @When("User enters valid information to place order")
     public void user_enters_information_to_place_order() 
     {
         driver.findElement(By.id("email")).sendKeys("abc6@gmail.com");
@@ -82,7 +82,7 @@ public class StepDefs
         driver.findElement(By.xpath("/html/body/main/div[1]/div/div[2]/div/form/div/button")).click();
     }
 
-    @When("User enters information to place order")
+    @When(" User enters invalid information to place order")
     public void user_enters_information() 
     {
         WebElement email = driver.findElement(By.id("email"));
@@ -116,7 +116,7 @@ public class StepDefs
         driver.findElement(By.id("credit_card_cvv")).sendKeys("6387");
     }
 
-    @Then("Order is Placed")
+    @Then("Order is not Placed")
     public void order_is_not_placed() 
     {
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
