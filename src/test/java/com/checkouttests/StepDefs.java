@@ -72,57 +72,59 @@ public class StepDefs
     public void order_is_placed() 
     {
         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
-    }
-    
-    @Given("User browse products")
-    public void user_browse_products_to_place_order()
-    {
-        driver.findElement(By.xpath("/html/body/main/div/div/div[2]/div[2]/div/a")).click(); 
-
-        driver.findElement(By.xpath("/html/body/main/div[1]/div/div[2]/div/form/div/button")).click();
-    }
-
-    @When(" User enters invalid information to place order")
-    public void user_enters_information() 
-    {
-        WebElement email = driver.findElement(By.id("email"));
-        
-        String msg = email.getAttribute("value");
-        
-        System.out.println("Value of type attribute: "+msg);
-        
-        String errmsg = "someone@example.com";
-        
-        Assert.assertFalse(errmsg.equals(msg));
-        
-        driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
-
-        driver.findElement(By.id("zip_code")).sendKeys("32456");
-                         
-        driver.findElement(By.id("city")).sendKeys("Orlando");
-           
-        driver.findElement(By.id("state")).sendKeys("Florida");
-
-        driver.findElement(By.id("country")).sendKeys("United States");
-
-        driver.findElement(By.id("credit_card_number")).sendKeys("2234-5632-1357-8294");
-          
-        Select credit_card_expiration_month = new Select(driver.findElement(By.id("credit_card_expiration_month")));
-        credit_card_expiration_month.selectByVisibleText("January");
-
-        Select credit_card_expiration_year = new Select(driver.findElement(By.id("credit_card_expiration_year")));
-        credit_card_expiration_year.selectByVisibleText("2023");
-           
-        driver.findElement(By.id("credit_card_cvv")).sendKeys("6387");
-    }
-
-    @Then("Order is not Placed")
-    public void order_is_not_placed() 
-    {
-        driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
         
         driver.close();
     }
+    
+//     @Given("User browse products")
+//     public void user_browse_products_to_place_order()
+//     {
+//         driver.findElement(By.xpath("/html/body/main/div/div/div[2]/div[2]/div/a")).click(); 
+
+//         driver.findElement(By.xpath("/html/body/main/div[1]/div/div[2]/div/form/div/button")).click();
+//     }
+
+//     @When(" User enters invalid information to place order")
+//     public void user_enters_information() 
+//     {
+//         WebElement email = driver.findElement(By.id("email"));
+        
+//         String msg = email.getAttribute("value");
+        
+//         System.out.println("Value of type attribute: "+msg);
+        
+//         String errmsg = "someone@example.com";
+        
+//         Assert.assertFalse(errmsg.equals(msg));
+        
+//         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
+
+//         driver.findElement(By.id("zip_code")).sendKeys("32456");
+                         
+//         driver.findElement(By.id("city")).sendKeys("Orlando");
+           
+//         driver.findElement(By.id("state")).sendKeys("Florida");
+
+//         driver.findElement(By.id("country")).sendKeys("United States");
+
+//         driver.findElement(By.id("credit_card_number")).sendKeys("2234-5632-1357-8294");
+          
+//         Select credit_card_expiration_month = new Select(driver.findElement(By.id("credit_card_expiration_month")));
+//         credit_card_expiration_month.selectByVisibleText("January");
+
+//         Select credit_card_expiration_year = new Select(driver.findElement(By.id("credit_card_expiration_year")));
+//         credit_card_expiration_year.selectByVisibleText("2023");
+           
+//         driver.findElement(By.id("credit_card_cvv")).sendKeys("6387");
+//     }
+
+//     @Then("Order is not Placed")
+//     public void order_is_not_placed() 
+//     {
+//         driver.findElement(By.xpath("/html/body/main/div/div/div[4]/div/form/div[4]/button")).click();
+        
+//         driver.close();
+//     }
 }
         
 
