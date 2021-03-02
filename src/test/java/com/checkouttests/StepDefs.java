@@ -53,9 +53,9 @@ public class StepDefs
         
         String errmsg = "someone@example.com";
         
-        Assert.assertFalse(errmsg.equals(msg));
-        
         driver.findElement(By.id("email")).sendKeys("abc6@gmail.com");
+        
+        Assert.assertFalse(errmsg.equals(msg));
         
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
