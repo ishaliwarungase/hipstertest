@@ -55,7 +55,7 @@ public class StepDefs
         
         if( !email.getAttribute("value").equals("someone@example.com"))
         {
-            Assert.fail("Please enter email address")
+            Assert.fail("Please enter email address");
         }
             
             
