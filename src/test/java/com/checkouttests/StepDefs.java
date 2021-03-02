@@ -47,15 +47,21 @@ public class StepDefs
     {
         WebElement email = driver.findElement(By.id("email"));
         
-        String msg = email.getAttribute("value");
+//         String msg = email.getAttribute("value");
         
-        System.out.println("Value of type attribute: "+msg);
+//         System.out.println("Value of type attribute: "+msg);
         
-        String errmsg = "someone@example.com";
+//         String errmsg = "someone@example.com";
         
-        driver.findElement(By.id("email")).sendKeys("abc6@gmail.com");
+        if( !email.getAttribute("value").equals("someone@example.com"))
+        {
+            Assert.fail("Please enter email address")
+        }
+            
+            
+//         driver.findElement(By.id("email")).sendKeys("abc6@gmail.com");
         
-        Assert.assertFalse(errmsg.equals(msg));
+//         Assert.assertFalse(errmsg.equals(msg));
         
         driver.findElement(By.id("street_address")).sendKeys("1600 Amphitheatre Park");
 
